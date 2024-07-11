@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* Styles for the home screen */
+         #about-section {
+            display: block; /* Change display property to block to make the home screen visible */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #about-section h2 {
+            color: #333;
+            font-size: 38px;
+        }
+
+        #about-section button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        #about-section button:hover {
+            background-color: #0056b3;
+        }
+        /* Flash screen styles */
+        #flash-screen {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url('background.jpg') no-repeat center center;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+          animation: fadeOut 1s ease-out 2s forwards, zoomIn 3s ease-in-out; /* Animation to fade out and zoom in */
+        }
+    
+        @keyframes fadeOut {
+          to {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+    
+        @keyframes zoomIn {
+          0% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.1);
+          }
+        }
+
+        /* Modified styles for the about section */
+        #about-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 20px auto; /* Center the paragraph by setting left and right margins to auto */
+            max-width: 900px; /* Limit the width of the paragraph */
+            color: #555;
+            text-shadow: #0056b3;
+        }
+        #about {
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+      </style>
+</head>
+<body>
+    <!-- Flash screen element -->
+    <div id="flash-screen">
+        <h1>Welcome to Stock Portfolio App</h1>
+        <img src="flash.svg" alt="Home Icon"/>
+    </div>
+    
+
+    <!-- Home screen content -->
+    <section id="about-section"> <!-- Changed h3 to section for about content -->
+        <h2>About Stock Portfolio</h2> <!-- Retained h3 for the heading -->
+        <img src="home.svg" alt="Home Icon" style="float: left; margin-right: 20px;"/>
+        <div id="about"><p>Stock Portfolio is a comprehensive financial management tool that allows users to track and
+            manage their investments in stocks, bonds, and other securities. It provides real-time updates
+             on stock prices, portfolio performance, and market trends. Users can analyze their investment strategies,
+              diversify their portfolios, and make informed decisions based on market data. Stock Portfolio
+               offers features such as portfolio rebalancing,
+            risk assessment, and performance tracking. It aims to help investors optimize their portfolios,
+             maximize returns, and achieve their financial goals through intelligent investment management.</p></div>
+         <!-- Changed h3 to p for the content -->
+         <div id="button"> <button onclick="window.location.href='index.html'">Open Stock Portfolio</button></div>
+    </section>
+</body>
+</html>
